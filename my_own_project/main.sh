@@ -5,7 +5,7 @@ first_menu=("Create Database" "List Databases" "Connect To Databases" "Drop Data
 select choies in "${first_menu[@]}"
 do
 case $REPLY in
-1) echo "hi $choies"
+1) . ./create_database.sh
 ;;
 2) echo "hi $choies"
 ;;

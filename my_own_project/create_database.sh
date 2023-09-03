@@ -11,7 +11,7 @@ then
 echo "database is founded chose other name"
 else
 case $name in
-+([a-zA-Z0-9_])) mkdir $name
++([a-zA-Z_]*)) mkdir -p ./DATABASES/$name
 echo "$name database is added"
 break
 ;;
