@@ -7,7 +7,7 @@ do
 case $REPLY in
 1) . ./create_database.sh
 ;;
-2) echo "hi $choies"
+2) . ./list_database.sh
 ;;
 3) . ./menu2.sh
 ;;
