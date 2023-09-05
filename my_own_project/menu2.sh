@@ -4,7 +4,7 @@ secend_menu=("Create Table" "List Tables" "Drop Table" "Insert into Table" "Sele
 select choies2 in "${secend_menu[@]}"
 do
 case $REPLY in
-1) echo "hi $choies2"
+1) . ./create_table.sh
 ;;
 2) echo "hi $choies2"
 ;;
