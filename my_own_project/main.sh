@@ -2,6 +2,7 @@
 
 #make first selector menue
 first_menu=("Create Database" "List Databases" "Connect To Databases" "Drop Database")
+please=`pwd`
 select choies in "${first_menu[@]}"
 do
 case $REPLY in

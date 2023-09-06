@@ -12,11 +12,11 @@ do
 case $REPLY in
 1) . ../../create_table.sh
 ;;
-2) echo "hi $choies2"
+2) . ../../list_table.sh
 ;;
-3) echo "hi $choies2"
+3) . ../../drop_table.sh
 ;;
-4) echo "hi $choies2"
+4) . ../../insert_table.sh
 ;;
 5) echo "hi $choies2"
 ;;
@@ -24,7 +24,9 @@ case $REPLY in
 ;;
 7) echo "hi $choies2"
 ;;
-8) echo "chose from first menu"
+8)
+cd ../..
+. ./main.sh
 break 2
 ;;
 *) echo "the $REPLY is not found"

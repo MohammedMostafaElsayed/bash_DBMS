@@ -29,7 +29,7 @@ done
 if [ $flag -eq 1 ]
 then
     flag2=0
-    data_type=("int" "char" "string")
+    data_type=("int" "string")
     array_col_name=()
     read -p "plese enter number of colom: " num
     i=0
@@ -66,11 +66,36 @@ then
                         echo "please write name of column in right way"		
                     esac
                 fi
+                flag2=0
             fi
         done
-            read -p "plese ender data type: " col_type
-            array_col_type[i]=$col_type
+            echo "plese chose data type from list: "
+            while true
+            do
+                select ch_data in "${data_type[@]}"
+                do
+                    case $REPLY in
+                    1)  row2="$row2$ch_data"
+                        if [ $(($i+1)) -ne $num ]
+                        then
+                            row2="$row2:" 
+                        fi
+                    break 2
+                    ;;
+                    2)  row2="$row2$ch_data"
+                        if [ $(($i+1)) -ne $num ]
+                        then
+                            row2="$row2:" 
+                        fi
+                    break 2
+                    ;;
+                    *) echo "$REPLY is not valid"
+                    esac
+                done
+            done
             i=$(($i+1))
     done
         echo "$row" >> $name_tb
+        echo "$row2" >> $name_tb
+        echo "==================================" >> $name_tb
 fi
