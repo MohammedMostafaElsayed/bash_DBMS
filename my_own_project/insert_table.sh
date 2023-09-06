@@ -18,10 +18,10 @@ then
         then
             case $data in
             +([0-9]))
-                row="$row$data"
+                ro="$ro$data"
                 if [ $(($i)) -ne $x ]
                 then
-                        row="$row:" 
+                        ro="$ro:" 
                 fi
                 break
             ;;
@@ -32,10 +32,10 @@ then
         then
             case $data in
             +([a-zA-z]))
-                row="$row$data"
+                ro="$ro$data"
                 if [ $(($i)) -ne $x ]
                 then
-                        row="$row:" 
+                        ro="$ro:" 
                 fi
                 break
             ;;
@@ -47,7 +47,7 @@ then
         done
         i=$(($i+1))
     done
-        echo "$row" >> $tb_name
+        echo "$ro" >> $tb_name
 
 else
     echo "table not found"

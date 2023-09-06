@@ -18,7 +18,7 @@ case $REPLY in
 ;;
 4) . ../../insert_table.sh
 ;;
-5) echo "hi $choies2"
+5) . ../../select_table.sh
 ;;
 6) echo "hi $choies2"
 ;;

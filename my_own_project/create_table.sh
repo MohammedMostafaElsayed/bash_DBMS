@@ -49,16 +49,18 @@ then
                     echo "$col_name is founded before chose other name"
                     flag2=1;
                     fi
-                done 
+                done
                 if [ $flag2 -ne 1 ]
                 then
                     case $col_name in
                     +([a-zA-Z_]*))
                         array_col_name[i]=$col_name
                         row="$row$col_name"
+                        row3="$row3======"
                         if [ $(($i+1)) -ne $num ]
                         then
-                        row="$row:" 
+                        row="$row:"
+                        row3="$row3:"
                         fi
                         break
                     ;;
@@ -97,5 +99,5 @@ then
     done
         echo "$row" >> $name_tb
         echo "$row2" >> $name_tb
-        echo "==================================" >> $name_tb
+        echo "$row3" >> $name_tb
 fi
