@@ -48,6 +48,7 @@ then
         i=$(($i+1))
     done
         echo "$ro" >> $tb_name
+        ro=""
 
 else
     echo "table not found"
