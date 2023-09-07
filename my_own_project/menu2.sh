@@ -20,9 +20,9 @@ case $REPLY in
 ;;
 5) . ../../select_table.sh
 ;;
-6) echo "hi $choies2"
+6) . ../../delete_from_table.sh
 ;;
-7) echo "hi $choies2"
+7) . ../../update_table.sh
 ;;
 8)
 cd ../..

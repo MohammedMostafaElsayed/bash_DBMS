@@ -1,9 +1,14 @@
-#!/bin/bash
-shopt -s extglob
-read -p "enter: " data
-if [ $data ]
-then
-echo "hahahahahahaha"
-else
-echo "zzzzzzz"
-fi
+hopt -s extglob
+1:hanaa:30
+1:hanaa:30
+1:hanaa:30
+1:hanaa:30
+1:hanaa:30
+1:hanaa:30
+1:hanaa:30
+1:hanaa:30
+1:hanaa:30
+1:hanaa:30
+1:hanaa:30
+1:hanaa:30
+1:hanaa:30
