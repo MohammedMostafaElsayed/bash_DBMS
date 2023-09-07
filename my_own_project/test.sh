@@ -1,6 +1,9 @@
 #!/bin/bash
-
-for i in id:name:age:salary
-do 
-echo $i
-done
+shopt -s extglob
+read -p "enter: " data
+if [ $data ]
+then
+echo "hahahahahahaha"
+else
+echo "zzzzzzz"
+fi

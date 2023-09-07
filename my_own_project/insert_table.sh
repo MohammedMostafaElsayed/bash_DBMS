@@ -10,6 +10,14 @@ then
         while true
         do
         read -p "enter data of $(awk -v z=$i -F: '{if(NR == 1 && z != 1){print $z} else if(z == 1 && NR == 1){print $z " (PK)"}}' ./$tb_name): " data
+        if [[ -z $data ]]
+        then
+            echo "you must enter data"
+        else
+        if [[ $data =~ .*:.* ]]
+        then
+            echo "not allowed to insert :"
+        else
         if [[ $(awk -F: -v dd=$data '{if( dd == $1) print "t"}' ./$tb_name) == "t" && $i -eq 1 ]]
         then
             echo "primary key not repeted"
@@ -44,11 +52,14 @@ then
             esac
         fi
         fi
+        fi
+        fi
         done
         i=$(($i+1))
     done
         echo "$ro" >> $tb_name
         ro=""
+
 
 else
     echo "table not found"

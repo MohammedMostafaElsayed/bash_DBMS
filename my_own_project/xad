@@ -1,0 +1,10 @@
+usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+geoclue:x:991:985:User for geoclue:/var/lib/geoclue:/sbin/nologin
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+sssd:x:990:984:User for sssd:/:/sbin/nologin
+setroubleshoot:x:989:983::/var/lib/setroubleshoot:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+gnome-initial-setup:x:988:982::/run/gnome-initial-setup/:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
