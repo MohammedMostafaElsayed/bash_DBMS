@@ -2,7 +2,7 @@
 
 #make first selector menue
 first_menu=("Create Database" "List Databases" "Connect To Databases" "Drop Database" "exit")
-please=`pwd`
+PS3="Select from menu one: "
 select choies in "${first_menu[@]}"
 do
 case $REPLY in

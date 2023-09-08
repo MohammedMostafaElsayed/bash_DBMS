@@ -92,6 +92,7 @@ then
             echo "plese chose data type from list: "
             while true
             do
+                PS3="Select data type: "
                 select ch_data in "${data_type[@]}"
                 do
                     case $REPLY in
@@ -115,6 +116,7 @@ then
             done
             i=$(($i+1))
     done
+        PS3="Select from menu two: "
         echo "$row" >> $name_tb
         echo "$row2" >> $name_tb
         echo "$row3" >> $name_tb

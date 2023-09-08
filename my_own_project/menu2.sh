@@ -7,6 +7,7 @@ read -p "please enter the name of database: " name
 if [ -d ./DATABASES/$name ]
 then
 cd ./DATABASES/$name
+PS3="Select from menu two: "
 select choies2 in "${secend_menu[@]}"
 do
 case $REPLY in
