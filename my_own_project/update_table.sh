@@ -14,11 +14,12 @@ do
             while true
             do
             read -p "enter the old value: " val_update
-            if [[ `awk -F: -v cu_name=$val_update -v numu_column=$colu_num '{if(cu_name == $numu_column) print cu_name}' ./$tbu_name` = $val_update ]]
-                then
+            check_u_val=`awk -F: -v cu_name=$val_update -v numu_column=$colu_num '{if(NR > 3){if(cu_name == $numu_column) i=i+1}}END{print i}' ./$tbu_name`
+            if [ $check_u_val ]
+            then
                 read -p "enter new value: " new_val
                 check=`awk -F: -v re_val=$new_val '{if(re_val == $1)print 1}' ./$tbu_name`
-                if [[ $colu_num -eq 1 && check -eq 1 ]]
+                if [[ $colu_num -eq 1 && $check -eq 1 ]]
                 then
                     echo "not allow to enter repeted value"
                 else

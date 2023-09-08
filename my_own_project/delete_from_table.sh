@@ -13,11 +13,12 @@ do
             while true
             do
             read -p "enter the value: " val_delet
-            if [[ `awk -F: -v cd_name=$val_delet -v numd_column=$cold_num '{if(cd_name == $numd_column) print cd_name}' ./$tbd_name` = $val_delet ]]
+            check_del_val=`awk -F: -v cd_name=$val_delet -v numd_column=$cold_num '{if(NR > 3){if(cd_name == $numd_column) i=i+1}}END{print i}' ./$tbd_name`
+            if [ $check_del_val ]
                 then
                 sed -i "/$val_delet/d" ./$tbd_name
                 echo "done"
-                break 2
+                break 3
             else
                 echo "no such value"
                 
