@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-secend_menu=("Create Table" "List Tables" "Drop Table" "Insert into Table" "Select From Table" "Delete From Table" "Update Table" "prev menu")
+secend_menu=("Create Table" "List Tables" "Drop Table" "Insert into Table" "Select From Table" "Delete From Table" "Update Table" "prev menu" "exit")
 while true
 do
 read -p "please enter the name of database: " name
@@ -28,6 +28,8 @@ case $REPLY in
 cd ../..
 . ./main.sh
 break 2
+;;
+9)exit 0
 ;;
 *) echo "the $REPLY is not found"
 esac

@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 #make first selector menue
-first_menu=("Create Database" "List Databases" "Connect To Databases" "Drop Database")
+first_menu=("Create Database" "List Databases" "Connect To Databases" "Drop Database" "exit")
 please=`pwd`
 select choies in "${first_menu[@]}"
 do
@@ -12,7 +12,9 @@ case $REPLY in
 ;;
 3) . ./menu2.sh
 ;;
-4) echo "hi $choies"
+4) . ./drop_database.sh
+;;
+5)exit 0
 ;;
 *) echo "the $REPLY is not found"
 esac
